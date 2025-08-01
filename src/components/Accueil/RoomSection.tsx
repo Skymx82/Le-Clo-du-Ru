@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import RoomModal from './RoomModal';
 import { openContactModule } from '@/utils/contactModule';
+import Script from 'next/script';
+import { roomSchema } from '@/utils/schema';
 
 // Interface pour le type de chambre
 interface Room {
@@ -102,6 +104,25 @@ const RoomSection = () => {
 
   return (
     <section id="chambres" className="py-12 bg-white">
+      {/* Schémas structurés JSON-LD pour chaque chambre */}
+      {rooms.map((room) => (
+        <Script
+          key={`room-schema-${room.id}`}
+          id={`room-schema-${room.id}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              roomSchema(
+                room.name,
+                room.description,
+                `https://leclosduru.fr${room.image}`,
+                room.capacity,
+                room.amenities
+              )
+            )
+          }}
+        />
+      ))}
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

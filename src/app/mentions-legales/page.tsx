@@ -1,14 +1,27 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { Navbar, Footer } from "../../components/Layout";
+import Breadcrumb from "../../components/Layout/Breadcrumb";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales | Tolarys',
-  description: 'Mentions légales et informations concernant le site Tolarys',
+  title: 'Mentions Légales | Le Clos du Ru',
+  description: 'Mentions légales et informations concernant le site Le Clos du Ru, chambres d\'hôtes au bord du canal d\'Orléans',
+  alternates: {
+    canonical: "/mentions-legales",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function MentionsLegales() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="font-sans min-h-screen flex flex-col">
+      <Navbar />
+      <Breadcrumb />
+      <div className="container mx-auto px-4 py-12 flex-grow">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-3xl font-semibold text-[#5B7B5E] mb-6">Mentions Légales</h1>
         
@@ -91,6 +104,34 @@ export default function MentionsLegales() {
           <p>Dernière mise à jour : 01/08/2025</p>
         </div>
       </div>
+      </div>
+      <Footer />
+      
+      {/* Données structurées JSON-LD pour les moteurs de recherche */}
+      <Script
+        id="json-ld-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Mentions Légales | Le Clos du Ru",
+            "description": "Mentions légales et informations concernant le site Le Clos du Ru, chambres d'hôtes au bord du canal d'Orléans",
+            "url": "https://leclosduru.fr/mentions-legales",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Le Clos du Ru",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://leclosduru.fr/favicon.ico"
+              }
+            },
+            "inLanguage": "fr-FR",
+            "datePublished": "2025-08-01",
+            "dateModified": "2025-08-01"
+          })
+        }}
+      />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://leclosduru.fr/sitemap.xml
+
+# Interdire l'accès aux fichiers sensibles
+Disallow: /.env
+Disallow: /.git
+Disallow: /.github
+Disallow: /node_modules

@@ -185,6 +185,8 @@ const Footer = () => {
             <Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</Link>
             <span>|</span>
             <Link href="/confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link>
+            <span>|</span>
+            <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
           </div>
         </div>
       </div>

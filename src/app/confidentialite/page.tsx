@@ -1,14 +1,27 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { Navbar, Footer } from "../../components/Layout";
+import Breadcrumb from "../../components/Layout/Breadcrumb";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: 'Politique de Confidentialité | Tolarys',
-  description: 'Politique de confidentialité et traitement des données personnelles du site Tolarys',
+  title: 'Politique de Confidentialité | Le Clos du Ru',
+  description: 'Politique de confidentialité et traitement des données personnelles du site Le Clos du Ru, chambres d\'hôtes au bord du canal d\'Orléans',
+  alternates: {
+    canonical: "/confidentialite",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PolitiqueConfidentialite() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="font-sans min-h-screen flex flex-col">
+      <Navbar />
+      <Breadcrumb />
+      <div className="container mx-auto px-4 py-12 flex-grow">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-3xl font-semibold text-[#5B7B5E] mb-6">Politique de Confidentialité</h1>
         
@@ -160,6 +173,34 @@ export default function PolitiqueConfidentialite() {
           <p>Dernière mise à jour : 01/08/2025</p>
         </div>
       </div>
+      </div>
+      <Footer />
+      
+      {/* Données structurées JSON-LD pour les moteurs de recherche */}
+      <Script
+        id="json-ld-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Politique de Confidentialité | Le Clos du Ru",
+            "description": "Politique de confidentialité et traitement des données personnelles du site Le Clos du Ru, chambres d'hôtes au bord du canal d'Orléans",
+            "url": "https://leclosduru.fr/confidentialite",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Le Clos du Ru",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://leclosduru.fr/favicon.ico"
+              }
+            },
+            "inLanguage": "fr-FR",
+            "datePublished": "2025-08-01",
+            "dateModified": "2025-08-01"
+          })
+        }}
+      />
     </div>
   );
 }
