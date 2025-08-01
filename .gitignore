@@ -40,13 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large media files
-/public/image/**/*.jpg
-/public/image/**/*.jpeg
-/public/image/**/*.png
-/public/image/**/*.gif
-/public/image/**/*.webp
-/public/image/**/*.JPG
-
 # backup folders
 public/image2/
