@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/nodemailer": "^7.0.1",
     "@types/react-date-range": "^1.4.10",
     "@types/react-datepicker": "^6.2.0",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
     "next": "15.4.4",
+    "nodemailer": "^7.0.5",
     "react": "19.1.0",
     "react-date-range": "^2.0.1",
     "react-datepicker": "^8.4.0",

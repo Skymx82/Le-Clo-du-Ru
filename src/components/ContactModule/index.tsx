@@ -8,6 +8,7 @@ import RoomSelectionStep from "./RoomSelectionStep";
 import ContactFormStep from "./ContactFormStep";
 import StepIndicator from "./StepIndicator";
 import GuestCountStep from "./GuestCountStep";
+import ConfirmationModal from "./ConfirmationModal";
 import { roomTypes } from "./roomData";
 import { FormData, RoomType, DateRangeType } from "./types";
 
@@ -30,6 +31,12 @@ export default function ContactModule() {
     phone: "",
     comment: "",
   });
+  
+  // États pour la modal de confirmation
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [confirmationType, setConfirmationType] = useState<'success' | 'error'>('success');
+  const [confirmationTitle, setConfirmationTitle] = useState('');
+  const [confirmationMessage, setConfirmationMessage] = useState('');
 
   // Vérifier s'il y a une chambre présélectionnée lors de l'ouverture du module
   useEffect(() => {
@@ -102,37 +109,78 @@ export default function ContactModule() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Ici vous pourriez ajouter la logique d'envoi du formulaire
-    if (dateRange.startDate && dateRange.endDate) {
-      console.log("Réservation soumise:", {
-        ...formData,
-        startDate: dateRange.startDate,
-        endDate: dateRange.endDate,
-        room: selectedRoom,
-        nights: Math.ceil((dateRange.endDate.getTime() - dateRange.startDate.getTime()) / (1000 * 60 * 60 * 24))
-      });
-      alert("Merci pour votre réservation ! Nous vous contacterons bientôt pour la confirmation.");
-      setIsOpen(false);
-      setCurrentStep(1);
-      setSelectedRoom(null);
-      setDateRange({
-        startDate: null,
-        endDate: null,
-        key: "selection",
-      });
-      setGuestCount(2);
+    
+    if (dateRange.startDate && dateRange.endDate && selectedRoom) {
+      try {
+        const nights = Math.ceil((dateRange.endDate.getTime() - dateRange.startDate.getTime()) / (1000 * 60 * 60 * 24));
+        
+        const reservationData = {
+          ...formData,
+          startDate: dateRange.startDate,
+          endDate: dateRange.endDate,
+          room: selectedRoom,
+          nights: nights,
+          guestCount: guestCount
+        };
+
+        // Envoi des données à l'API d'email
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(reservationData),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Afficher la confirmation de succès
+          setConfirmationType('success');
+          setConfirmationTitle('Réservation envoyée !');
+          setConfirmationMessage('Merci pour votre réservation ! Un email a été envoyé avec vos informations. Nous vous contacterons bientôt pour la confirmation.');
+          setShowConfirmation(true);
+          
+          // Réinitialiser le formulaire après un délai
+          setTimeout(() => {
+            setIsOpen(false);
+            setCurrentStep(1);
+            setSelectedRoom(null);
+            setDateRange({
+              startDate: null,
+              endDate: null,
+              key: "selection",
+            });
+            setGuestCount(2);
+            setFormData({
+              firstName: "",
+              lastName: "",
+              country: "France",
+              email: "",
+              phoneCode: "+33",
+              phone: "",
+              comment: "",
+            });
+          }, 4500);
+        } else {
+          // Afficher l'erreur
+          setConfirmationType('error');
+          setConfirmationTitle('Erreur d\'envoi');
+          setConfirmationMessage('Erreur lors de l\'envoi de votre réservation. Veuillez réessayer ou nous contacter directement.');
+          setShowConfirmation(true);
+          console.error('Erreur:', result.message);
+        }
+      } catch (error) {
+        // Afficher l'erreur de connexion
+        setConfirmationType('error');
+        setConfirmationTitle('Problème de connexion');
+        setConfirmationMessage('Erreur lors de l\'envoi de votre réservation. Veuillez vérifier votre connexion internet et réessayer.');
+        setShowConfirmation(true);
+        console.error('Erreur lors de l\'envoi:', error);
+      }
     }
-    setFormData({
-      firstName: "",
-      lastName: "",
-      country: "France",
-      email: "",
-      phoneCode: "+33",
-      phone: "",
-      comment: "",
-    });
   };
 
   return (
@@ -257,6 +305,15 @@ export default function ContactModule() {
           </form>
         </div>
       </div>
+
+      {/* Modal de confirmation */}
+      <ConfirmationModal
+        isVisible={showConfirmation}
+        onClose={() => setShowConfirmation(false)}
+        type={confirmationType}
+        title={confirmationTitle}
+        message={confirmationMessage}
+      />
     </>
   );
 }
