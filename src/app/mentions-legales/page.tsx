@@ -117,13 +117,13 @@ export default function MentionsLegales() {
             "@type": "WebPage",
             "name": "Mentions Légales | Le Clos du Ru",
             "description": "Mentions légales et informations concernant le site Le Clos du Ru, chambres d'hôtes au bord du canal d'Orléans",
-            "url": "https://leclosduru.fr/mentions-legales",
+            "url": "https://www.leclosduru.fr/mentions-legales",
             "publisher": {
               "@type": "Organization",
               "name": "Le Clos du Ru",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://leclosduru.fr/favicon.ico"
+                "url": "https://www.leclosduru.fr/favicon.ico"
               }
             },
             "inLanguage": "fr-FR",

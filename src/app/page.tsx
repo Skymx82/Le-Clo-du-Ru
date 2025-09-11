@@ -45,7 +45,7 @@ export default function Home() {
             "@type": "LodgingBusiness",
             "name": "Le Clos du Ru",
             "description": "Chambres d'hôtes de charme situées au bord du canal d'Orléans dans un cadre naturel et paisible",
-            "url": "https://leclosduru.fr",
+            "url": "https://www.leclosduru.fr",
             "telephone": "+33612345678",
             "email": "contact@leclosduru.fr",
             "address": {
@@ -68,9 +68,9 @@ export default function Home() {
               "bestRating": "5"
             },
             "image": [
-              "https://leclosduru.fr/image/Façade le clos du Ru/10.JPG",
-              "https://leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
-              "https://leclosduru.fr/image/Chambre N°1/P1090412.jpg"
+              "https://www.leclosduru.fr/image/Façade le clos du Ru/10.JPG",
+              "https://www.leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
+              "https://www.leclosduru.fr/image/Chambre N°1/P1090412.jpg"
             ],
             "amenityFeature": [
               {
@@ -93,7 +93,7 @@ export default function Home() {
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://leclosduru.fr/#contact",
+                "urlTemplate": "https://www.leclosduru.fr/#contact",
                 "inLanguage": "fr-FR",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",

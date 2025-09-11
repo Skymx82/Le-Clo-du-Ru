@@ -115,7 +115,7 @@ const RoomSection = () => {
               roomSchema(
                 room.name,
                 room.description,
-                `https://leclosduru.fr${room.image}`,
+                `https://www.leclosduru.fr${room.image}`,
                 room.capacity,
                 room.amenities
               )

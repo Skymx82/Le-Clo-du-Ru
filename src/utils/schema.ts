@@ -8,7 +8,7 @@ export const hotelSchema = {
   "@type": "LodgingBusiness",
   "name": "Le Clos du Ru",
   "description": "Chambres d'hôtes de charme situées au bord du canal d'Orléans dans un cadre naturel et paisible",
-  "url": "https://leclosduru.fr",
+  "url": "https://www.leclosduru.fr",
   "telephone": "+33607840213",
   "email": "fredericduru@orange.fr",
   "address": {
@@ -31,9 +31,9 @@ export const hotelSchema = {
     "bestRating": "5"
   },
   "image": [
-    "https://leclosduru.fr/image/Façade le clos du Ru/10.JPG",
-    "https://leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
-    "https://leclosduru.fr/image/Chambre N°1/P1090412.jpg"
+    "https://www.leclosduru.fr/image/Façade le clos du Ru/10.JPG",
+    "https://www.leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
+    "https://www.leclosduru.fr/image/Chambre N°1/P1090412.jpg"
   ],
   "amenityFeature": [
     {
@@ -127,6 +127,6 @@ export const breadcrumbSchema = (items: {name: string, url: string}[]) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://leclosduru.fr${item.url}`
+    "item": `https://www.leclosduru.fr${item.url}`
   }))
 });

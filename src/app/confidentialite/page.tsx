@@ -186,13 +186,13 @@ export default function PolitiqueConfidentialite() {
             "@type": "WebPage",
             "name": "Politique de Confidentialité | Le Clos du Ru",
             "description": "Politique de confidentialité et traitement des données personnelles du site Le Clos du Ru, chambres d'hôtes au bord du canal d'Orléans",
-            "url": "https://leclosduru.fr/confidentialite",
+            "url": "https://www.leclosduru.fr/confidentialite",
             "publisher": {
               "@type": "Organization",
               "name": "Le Clos du Ru",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://leclosduru.fr/favicon.ico"
+                "url": "https://www.leclosduru.fr/favicon.ico"
               }
             },
             "inLanguage": "fr-FR",
