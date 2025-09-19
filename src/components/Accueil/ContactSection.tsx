@@ -75,7 +75,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-800">Adresse</h4>
-                    <p className="text-gray-600">Le Clos du Ru<br />12 Rue du Ru<br />51210 Montmirail<br />France</p>
+                    <p className="text-gray-600">Le Clos du Ru<br />49 Les Landois<br />45260 Presnoy<br />France</p>
                   </div>
                 </motion.div>
                 
@@ -111,7 +111,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-800">Horaires</h4>
-                    <p className="text-gray-600">Check-in: 15h00 - 19h00<br />Check-out: avant 11h00</p>
+                    <p className="text-gray-600">Check-in: 17h30 - 21h00<br />Check-out: avant 11h00</p>
                   </div>
                 </motion.div>
               </div>
@@ -131,13 +131,13 @@ const ContactSection = () => {
                 scrolling="no" 
                 marginHeight={0} 
                 marginWidth={0} 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=3.5294,48.8719,3.5494,48.8819&amp;layer=mapnik&amp;marker=48.8769,3.5394" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=2.4986,47.8927,2.5186,47.9127&amp;layer=mapnik&amp;marker=47.9027,2.5086" 
                 title="Le Clos du Ru - Carte"
                 className="border-0"
               ></iframe>
               <div className="bg-white p-2 text-center text-sm">
                 <a 
-                  href="https://www.openstreetmap.org/?mlat=48.8769&amp;mlon=3.5394#map=15/48.8769/3.5394" 
+                  href="https://www.openstreetmap.org/?mlat=47.9027&amp;mlon=2.5086#map=15/47.9027/2.5086" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#5B7B5E] hover:underline"

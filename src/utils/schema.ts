@@ -8,21 +8,21 @@ export const hotelSchema = {
   "@type": "LodgingBusiness",
   "name": "Le Clos du Ru",
   "description": "Chambres d'hôtes de charme situées au bord du canal d'Orléans dans un cadre naturel et paisible",
-  "url": "https://www.leclosduru.fr",
+  "url": "https://www.leclosduru.com",
   "telephone": "+33607840213",
   "email": "fredericduru@orange.fr",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "12 Rue du Ru",
-    "addressLocality": "Montmirail",
-    "addressRegion": "Grand Est",
-    "postalCode": "51210",
+    "streetAddress": "49 Les Landois",
+    "addressLocality": "Presnoy",
+    "addressRegion": "Centre-Val de Loire",
+    "postalCode": "45260",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "48.8769",
-    "longitude": "3.5394"
+    "latitude": "47.9027336",
+    "longitude": "2.5086044"
   },
   "priceRange": "€€",
   "starRating": {
@@ -31,9 +31,9 @@ export const hotelSchema = {
     "bestRating": "5"
   },
   "image": [
-    "https://www.leclosduru.fr/image/Façade le clos du Ru/10.JPG",
-    "https://www.leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
-    "https://www.leclosduru.fr/image/Chambre N°1/P1090412.jpg"
+    "https://www.leclosduru.com/image/Façade le clos du Ru/10.JPG",
+    "https://www.leclosduru.com/image/Jardin le clos du Ru/IMG_3636.jpeg",
+    "https://www.leclosduru.com/image/Chambre N°1/P1090412.jpg"
   ],
   "amenityFeature": [
     {
@@ -49,6 +49,11 @@ export const hotelSchema = {
     {
       "@type": "LocationFeatureSpecification",
       "name": "Petit-déjeuner inclus",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Table d'hôtes sur demande",
       "value": true
     }
   ]
@@ -90,7 +95,7 @@ export const faqSchema = {
       "name": "Quels sont les horaires d'arrivée et de départ ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le check-in est possible entre 15h00 et 19h00. Le check-out doit être effectué avant 11h00."
+        "text": "Le check-in est possible entre 17h30 et 21h00. Le check-out doit être effectué avant 11h00."
       }
     },
     {
@@ -127,6 +132,6 @@ export const breadcrumbSchema = (items: {name: string, url: string}[]) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://www.leclosduru.fr${item.url}`
+    "item": `https://www.leclosduru.com${item.url}`
   }))
 });

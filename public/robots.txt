@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.leclosduru.fr/sitemap.xml
+Sitemap: https://www.leclosduru.com/sitemap.xml
 
 # Interdire l'accès aux fichiers sensibles
 Disallow: /.env

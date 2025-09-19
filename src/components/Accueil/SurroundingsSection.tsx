@@ -9,15 +9,15 @@ const SurroundingsSection = () => {
   const attractions = [
     {
       id: 1,
-      name: "Canal de la Marne",
-      description: "Profitez de balades paisibles le long du canal et découvrez la beauté des paysages champenois.",
+      name: "Canal d'Orléans",
+      description: "Profitez de balades paisibles le long du canal et découvrez la beauté des paysages du Loiret.",
       image: "/image/Photos Canal/IMG_8917.JPG",
       distance: "5 min à pied"
     },
     {
       id: 2,
-      name: "Vignobles de Champagne",
-      description: "Visitez les célèbres vignobles de la région et dégustez le champagne directement chez les producteurs.",
+      name: "Forêt d'Orléans",
+      description: "Explorez la majestueuse forêt d'Orléans, idéale pour les randonnées et la découverte de la faune et flore locales.",
       image: "/image/Photos Canal/IMG_8915.JPG",
       distance: "15 min en voiture"
     },
@@ -67,7 +67,7 @@ const SurroundingsSection = () => {
               Découvrez les Environs
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Le Clos du Ru est idéalement situé pour explorer les trésors de la Champagne. 
+              Le Clos du Ru est idéalement situé pour explorer les trésors du Loiret. 
               Entre nature, patrimoine et gastronomie, laissez-vous séduire par notre région.
             </p>
           </motion.div>

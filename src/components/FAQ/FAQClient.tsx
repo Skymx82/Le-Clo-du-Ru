@@ -34,7 +34,7 @@ const FAQClient: React.FC = () => {
       id: 1,
       category: 'sejour',
       question: "Quels sont les horaires d'arrivée et de départ ?",
-      answer: "Le check-in est possible entre 15h00 et 19h00. Le check-out doit être effectué avant 11h00. Si vous avez besoin d'horaires différents, n'hésitez pas à nous contacter à l'avance pour voir si un arrangement est possible."
+      answer: "Le check-in est possible entre 17h30 et 21h00. Le check-out doit être effectué avant 11h00. Si vous avez besoin d'horaires différents, n'hésitez pas à nous contacter à l'avance pour voir si un arrangement est possible."
     },
     {
       id: 2,
@@ -46,7 +46,7 @@ const FAQClient: React.FC = () => {
       id: 3,
       category: 'sejour',
       question: "Proposez-vous des repas autres que le petit-déjeuner ?",
-      answer: "Nous ne proposons pas de repas sur place autres que le petit-déjeuner, mais nous serons ravis de vous recommander d'excellents restaurants dans les environs."
+      answer: "Nous proposons une table d'hôtes sur demande. Pour en bénéficier, merci de nous contacter directement lors de votre réservation ou avant votre séjour. Nous serons également ravis de vous recommander d'excellents restaurants dans les environs."
     },
     
     // Catégorie: Services et commodités
@@ -106,7 +106,7 @@ const FAQClient: React.FC = () => {
       id: 12,
       category: 'region',
       question: "Comment se rendre au Clos du Ru en transports en commun ?",
-      answer: "La gare la plus proche se trouve à Montmirail, à environ 5 km. Un service de taxi est disponible depuis la gare. Si vous nous informez de votre heure d'arrivée, nous pouvons organiser votre transfert (service payant)."
+      answer: "La gare la plus proche se trouve à Bellegarde-du-Loiret, à environ 15 km. Un service de taxi est disponible depuis la gare. Si vous nous informez de votre heure d'arrivée, nous pouvons organiser votre transfert (service payant). Une voiture est recommandée pour accéder à notre maison d'hôtes située en pleine campagne."
     }
   ];
 

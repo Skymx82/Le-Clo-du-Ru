@@ -70,7 +70,7 @@ const GallerySection = () => {
               variants={itemVariants}
               className="text-gray-600 max-w-2xl mx-auto"
             >
-              Découvrez notre gîte en images et laissez-vous séduire par son charme authentique.
+              Découvrez notre maison d'hôtes en images et laissez-vous séduire par son charme authentique.
             </motion.p>
           </motion.div>
 

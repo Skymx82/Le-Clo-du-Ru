@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ContactModule from "../components/ContactModule";
 import { Navbar, Footer } from "../components/Layout";
-import { HeroSection, GitePresentation, RoomSection, SurroundingsSection, GallerySection, ContactSection } from "../components/Accueil";
+import { HeroSection, MaisonHotesPresentation, RoomSection, SurroundingsSection, GallerySection, ContactSection } from "../components/Accueil";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -20,7 +20,7 @@ export default function Home() {
 
       <HeroSection />
 
-      <GitePresentation />
+      <MaisonHotesPresentation />
       
       <RoomSection />
       
@@ -45,15 +45,15 @@ export default function Home() {
             "@type": "LodgingBusiness",
             "name": "Le Clos du Ru",
             "description": "Chambres d'hôtes de charme situées au bord du canal d'Orléans dans un cadre naturel et paisible",
-            "url": "https://www.leclosduru.fr",
+            "url": "https://www.leclosduru.com",
             "telephone": "+33612345678",
             "email": "contact@leclosduru.fr",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "12 rue du Canal",
-              "addressLocality": "Orléans",
+              "streetAddress": "49 Les Landois",
+              "addressLocality": "Presnoy",
               "addressRegion": "Centre-Val de Loire",
-              "postalCode": "45000",
+              "postalCode": "45260",
               "addressCountry": "FR"
             },
             "geo": {
@@ -68,9 +68,9 @@ export default function Home() {
               "bestRating": "5"
             },
             "image": [
-              "https://www.leclosduru.fr/image/Façade le clos du Ru/10.JPG",
-              "https://www.leclosduru.fr/image/Jardin le clos du Ru/IMG_3636.jpeg",
-              "https://www.leclosduru.fr/image/Chambre N°1/P1090412.jpg"
+              "https://www.leclosduru.com/image/Façade le clos du Ru/10.JPG",
+              "https://www.leclosduru.com/image/Jardin le clos du Ru/IMG_3636.jpeg",
+              "https://www.leclosduru.com/image/Chambre N°1/P1090412.jpg"
             ],
             "amenityFeature": [
               {
@@ -87,13 +87,18 @@ export default function Home() {
                 "@type": "LocationFeatureSpecification",
                 "name": "Petit-déjeuner inclus",
                 "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Table d'hôtes sur demande",
+                "value": true
               }
             ],
             "potentialAction": {
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.leclosduru.fr/#contact",
+                "urlTemplate": "https://www.leclosduru.com/#contact",
                 "inLanguage": "fr-FR",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",

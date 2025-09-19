@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const GitePresentation = () => {
+const MaisonHotesPresentation = () => {
   // Variants pour les animations
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,7 +43,7 @@ const GitePresentation = () => {
               Bienvenue au Clos du Ru
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Un havre de paix niché au cœur de la Champagne, où le temps s'arrête pour vous offrir un séjour ressourçant.
+              Un havre de paix niché au cœur du Loiret, où le temps s'arrête pour vous offrir un séjour ressourçant.
             </p>
           </motion.div>
           
@@ -67,10 +67,19 @@ const GitePresentation = () => {
                 Une maison de caractère
               </h3>
               <p className="text-gray-600">
-                Le Clos du Ru est une maison de caractère datant du XIXème siècle, entièrement rénovée pour vous offrir confort et authenticité. Située dans un village paisible, elle vous accueille pour un séjour en famille ou entre amis.
+                Le Clos du Ru est une maison de caractère datant du XIXème siècle, entièrement rénovée pour vous offrir confort et authenticité. Située en pleine campagne, elle vous accueille pour un séjour en famille ou entre amis.
               </p>
               <p className="text-gray-600">
-                Avec son grand jardin arboré de 2500m², ses espaces de vie chaleureux et ses chambres confortables, Le Clos du Ru est l'endroit idéal pour se ressourcer et découvrir les richesses de notre région.
+                Avec son grand jardin arboré de 9500m², ses espaces de vie chaleureux et ses chambres confortables, Le Clos du Ru est l'endroit idéal pour se ressourcer et découvrir les richesses de notre région.
+              </p>
+              <p className="text-gray-600">
+                Pour votre confort, nous mettons à votre disposition un parking gratuit et sécurisé au sein de la propriété.
+              </p>
+              <p className="text-gray-600">
+                Les animaux de compagnie sont les bienvenus moyennant un supplément.
+              </p>
+              <p className="text-gray-600">
+                Le Clos du Ru accueille également les cyclistes et dispose d'un espace sécurisé pour ranger vos vélos.
               </p>
             </div>
           </motion.div>
@@ -94,10 +103,10 @@ const GitePresentation = () => {
                 Un écrin de verdure
               </h3>
               <p className="text-gray-600">
-                Profitez d'un jardin luxuriant où règnent calme et sérénité. Les grands arbres centenaires vous offrent leur ombre en été, tandis que les espaces fleuris invitent à la contemplation.
+                Profitez d'un jardin luxuriant où règnent calme et sérénité. Les beaux arbres vous offrent leur ombre en été, tandis que les espaces fleuris invitent à la contemplation.
               </p>
               <p className="text-gray-600">
-                Le jardin dispose de plusieurs espaces de détente : terrasse ensoleillée, coins ombragés, et même un petit potager dont vous pourrez déguster les fruits selon la saison.
+                Le jardin dispose de plusieurs espaces de détente : terrasse ensoleillée, coins ombragés, un potager où nous cultivons des légumes, ainsi qu'un verger dont vous pourrez déguster les fruits selon la saison.
               </p>
             </div>
           </motion.div>
@@ -121,10 +130,13 @@ const GitePresentation = () => {
                 Des moments de partage
               </h3>
               <p className="text-gray-600">
-                Chaque matin, savourez un petit déjeuner gourmand composé de produits frais et locaux. Pains et viennoiseries, confitures maison, fruits de saison et spécialités régionales raviront vos papilles.
+                Chaque matin, savourez un petit déjeuner gourmand composé de produits frais et locaux. Pains et viennoiseries, confitures maison et fruits de saison raviront vos papilles.
               </p>
               <p className="text-gray-600">
                 Nous accordons une attention particulière à la qualité de nos produits et privilégions les circuits courts pour vous offrir une expérience authentique et respectueuse de l'environnement.
+              </p>
+              <p className="text-gray-600">
+                <strong>Table d'hôtes sur demande</strong> : Pour déguster un dîner fait maison avec des produits locaux, n'hésitez pas à nous contacter lors de votre réservation ou avant votre séjour.
               </p>
             </div>
           </motion.div>
@@ -134,4 +146,4 @@ const GitePresentation = () => {
   );
 };
 
-export default GitePresentation;
+export default MaisonHotesPresentation;

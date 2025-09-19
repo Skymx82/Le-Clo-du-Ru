@@ -42,7 +42,7 @@ export default function PolitiqueConfidentialite() {
           </p>
           <p className="text-gray-700 mb-2">
             <span className="font-medium">Tolarys</span><br />
-            Adresse : Le Clos du Ru, 45290 Varennes-Changy, France<br />
+            Adresse : Le Clos du Ru, 49 Les Landois, 45260 Presnoy, France<br />
             Email : tolarystoulouse@gmail.com<br />
             SIRET : 94208529100014
           </p>
@@ -186,13 +186,13 @@ export default function PolitiqueConfidentialite() {
             "@type": "WebPage",
             "name": "Politique de Confidentialité | Le Clos du Ru",
             "description": "Politique de confidentialité et traitement des données personnelles du site Le Clos du Ru, chambres d'hôtes au bord du canal d'Orléans",
-            "url": "https://www.leclosduru.fr/confidentialite",
+            "url": "https://www.leclosduru.com/confidentialite",
             "publisher": {
               "@type": "Organization",
               "name": "Le Clos du Ru",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.leclosduru.fr/favicon.ico"
+                "url": "https://www.leclosduru.com/favicon.ico"
               }
             },
             "inLanguage": "fr-FR",

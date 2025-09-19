@@ -21,7 +21,7 @@ export const roomTypes: RoomType[] = [
   {
     id: 3,
     name: "Chambre Double 3",
-    description: "40 m² avec 1 lit king-size et 2 lits simples dans une pièce séparée",
+    description: "40 m² au 1er étage avec 1 lit king-size et 2 lits simples dans une pièce séparée. Salle de bain avec douche et baignoire. Possibilité d'installer un lit bébé sur demande.",
     price: 130,
     capacity: 4,
     image: "/image/Chambre N°3/IMG_3655.jpeg",

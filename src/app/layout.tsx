@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Le Clos du Ru - Chambres d'hôtes de charme au bord du canal d'Orléans",
     description: "Découvrez Le Clos du Ru, chambres d'hôtes de charme situées au bord du canal d'Orléans dans un cadre naturel et paisible.",
-    url: "https://www.leclosduru.fr",
+    url: "https://www.leclosduru.com",
     siteName: "Le Clos du Ru",
     images: [
       {

@@ -67,7 +67,7 @@ const RoomSection = () => {
     {
       id: 3,
       name: "Chambre Double 3",
-      description: "Chambre spacieuse de 40 m² avec un lit king-size et deux lits simples dans une pièce séparée. Idéale pour les familles ou petits groupes.",
+      description: "Chambre spacieuse de 40 m² au 1er étage avec un lit king-size et deux lits simples dans une pièce séparée. Idéale pour les familles ou petits groupes.",
       image: "/image/Chambre N°3/IMG_3655.jpeg",
       gallery: [
         "/image/Chambre N°3/IMG_3656.jpeg",
@@ -76,7 +76,7 @@ const RoomSection = () => {
         "/image/Chambre N°3/IMG_3670.jpeg"
       ],
       capacity: "4 personnes",
-      amenities: ["Wi-Fi gratuit", "Douche", "Bureau", "TV écran plat", "Sèche-cheveux", "Ventilateur", "Penderie"]
+      amenities: ["Wi-Fi gratuit", "Douche et baignoire", "Bureau", "TV écran plat", "Sèche-cheveux", "Ventilateur", "Penderie", "Lit bébé sur demande", "1er étage"]
     }
   ];
 
@@ -115,7 +115,7 @@ const RoomSection = () => {
               roomSchema(
                 room.name,
                 room.description,
-                `https://www.leclosduru.fr${room.image}`,
+                `https://www.leclosduru.com${room.image}`,
                 room.capacity,
                 room.amenities
               )
